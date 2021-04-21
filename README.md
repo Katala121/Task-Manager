@@ -1,2 +1,3 @@
 # Task-Manager
-testing app 
+
+This testing application implemented with React TypeScript.
