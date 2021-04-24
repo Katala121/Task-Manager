@@ -7,12 +7,13 @@ const mapStateToProps = (state: Store) => ({
     tasks: state.taskReducer,
 })
 
-const TaskItemList: React.FC<typeState> = (tasks: typeState): any => {
+const TaskItemList: React.FC<any> = ({ tasks }: any): any => {
+    console.log(tasks)
 
     return (
-        <div>
+        <div className="tasks-container">
             {
-                tasks.map(item => (<TaskItem
+                tasks.map((item:any) => (<TaskItem
                     id={item.id}
                     date={item.date}
                     text={item.text}
