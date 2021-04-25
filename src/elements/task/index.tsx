@@ -5,7 +5,7 @@ import './style.css';
 import { Task } from '../../core/models/task';
 import { cutText } from '../../core/utils/cutText';
 
-const TaskItem: React.FC<Task> = ({ date, text, id }: Task) => {
+const TaskItem: React.FC<Task> = ({ date, text, id, expired }: Task) => {
 
     const dispatch = useDispatch();
 
@@ -14,13 +14,23 @@ const TaskItem: React.FC<Task> = ({ date, text, id }: Task) => {
         dispatch(deleteTask({ id: String(id) }));
     }
 
-    return (
-        <div className="task-item" data-id={id}>
-            <span>{date.toDateString()}</span>
-            <p>{cutText(text)}</p>
-            <span className="delete-task" onClick={deleteTaskItem}>❌</span>
-        </div>
-    );
+    if (expired) {
+        return (
+            <div className="task-item expired" data-id={id}>
+                <span>{date.toDateString()}</span>
+                <p>{cutText(text)}</p>
+                <span className="delete-task" onClick={deleteTaskItem}>❌</span>
+            </div>
+        );
+    } else {
+        return (
+            <div className="task-item" data-id={id}>
+                <span>{date.toDateString()}</span>
+                <p>{cutText(text)}</p>
+                <span className="delete-task" onClick={deleteTaskItem}>❌</span>
+            </div>
+        );
+    }
 };
 
 

@@ -1,8 +1,10 @@
 import { ActionsTypes } from '../utils/constants';
 import { typeState, ActionsType } from '../models/types';
 import { initialState } from '../../core/utils/initialState';
+import { isExpiredTask } from '../../core/utils/isExpiredTask';
 
 function taskReducer(state: typeState = initialState, action: ActionsType): typeState {
+    state = isExpiredTask(state);
     switch (action.type) {
         case ActionsTypes.ADD_TASK: 
             return [
