@@ -1,5 +1,6 @@
 import { AnyAction } from 'redux';
-import c from '../utils/constants';
+import { ActionsType } from '../models/types';
+import { ActionsTypes } from '../utils/constants';
 
 type actionProps = {
     id: string,
@@ -8,8 +9,8 @@ type actionProps = {
     expired: boolean,
 } 
 
-export const addTask = ({ id, date, text }: actionProps): AnyAction => ({
-    type: c.ADD_TASK,
+export const addTask = ({ id, date, text }: actionProps): ActionsType => ({
+    type: ActionsTypes.ADD_TASK,
     id,
     date,
     text,
@@ -17,6 +18,6 @@ export const addTask = ({ id, date, text }: actionProps): AnyAction => ({
 });
 
 export const deleteTask = ({ id }:actionProps): AnyAction => ({
-    type: c.DELETE_TASK,
+    type: ActionsTypes.DELETE_TASK,
     id,
 });

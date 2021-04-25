@@ -1,6 +1,9 @@
-const constants = {
+export const constants = {
     ADD_TASK: 'ADD_TASK',
     DELETE_TASK: 'DELETE_TASK',
 }
 
-export default constants;
+ export enum ActionsTypes {
+    ADD_TASK = 'ADD_TASK',
+    DELETE_TASK = 'DELETE_TASK,'
+ }

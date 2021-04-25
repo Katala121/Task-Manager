@@ -1,0 +1,29 @@
+.new-task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.button-add-task {
+    width: 100px;
+    height: 20px;
+    background-color: lightskyblue;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.button-add-task span {
+    font-size: 16px;
+}
+
+.button-add-task:hover {
+    background-color: lightsteelblue;
+    cursor: pointer;
+}

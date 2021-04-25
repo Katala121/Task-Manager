@@ -7,9 +7,13 @@ export type Task = {
     expired: boolean;
 };
 
-export const createTask = (): Task => ({
+type createTaskProps = {
+    text: string,
+}
+
+export const createTask = ({ text }: createTaskProps): Task => ({
     id: uuid(),
     date: new Date(+new Date + 604800000),
-    text: '#Новая задача',
+    text: text,
     expired: false,
 });

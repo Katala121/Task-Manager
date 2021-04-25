@@ -1,5 +1,6 @@
 import React from 'react';
 import  TaskItem  from '../../elements/task'
+import NewTask from '../newTask/index';
 import { Store, typeState } from '../../core/models/types';
 import { connect } from 'react-redux';
 
@@ -21,6 +22,7 @@ const TaskItemList: React.FC<any> = ({ tasks }: any): any => {
                     />)
                     )
             }
+            <NewTask />
         </div>
     );
 };

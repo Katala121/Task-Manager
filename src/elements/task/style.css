@@ -1,8 +1,12 @@
 .task-item {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     border-bottom: 1px solid lightgrey;
+}
+
+.delete-task:hover {
+    cursor: pointer;
 }

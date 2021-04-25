@@ -1,7 +1,5 @@
-import { AnyAction } from 'redux';
-import c from '../utils/constants';
-import { typeState } from '../models/types';
-import { Reducer } from 'react';
+import { ActionsTypes } from '../utils/constants';
+import { typeState, ActionsType } from '../models/types';
 import uuid from '../utils/generateUUID';
 
 const initialState = [
@@ -19,9 +17,9 @@ const initialState = [
     },
 ];
 
-function taskReducer(state: typeState = initialState, action: AnyAction): typeState {
+function taskReducer(state: typeState = initialState, action: ActionsType): typeState {
     switch (action.type) {
-        case c.ADD_TASK: 
+        case ActionsTypes.ADD_TASK: 
             return [
                     ...state,
                     {
@@ -31,7 +29,7 @@ function taskReducer(state: typeState = initialState, action: AnyAction): typeSt
                         expired: action.expired,
                     }
                 ]
-        case c.DELETE_TASK: 
+        case ActionsTypes.DELETE_TASK: 
             return state.filter( c => c.id !== action.id);
         default:
             return state;
