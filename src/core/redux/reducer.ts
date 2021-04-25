@@ -1,27 +1,6 @@
 import { ActionsTypes } from '../utils/constants';
 import { typeState, ActionsType } from '../models/types';
-import uuid from '../utils/generateUUID';
-
-const initialState = [
-    {
-        id: uuid(),
-        date: new Date(+new Date - 86400000),
-        text: 'Implementation testing application',
-        expired: false,
-    },
-    {
-        id: uuid(),
-        date: new Date(+new Date + 86400000),
-        text: 'Deploying testing application',
-        expired: false,
-    },
-    {
-        id: uuid(),
-        date: new Date(+new Date + 86900000),
-        text: 'Send testing application',
-        expired: false,
-    },
-];
+import { initialState } from '../../core/utils/initialState';
 
 function taskReducer(state: typeState = initialState, action: ActionsType): typeState {
     switch (action.type) {
