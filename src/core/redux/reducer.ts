@@ -15,6 +15,12 @@ const initialState = [
         text: 'Deploying testing application',
         expired: false,
     },
+    {
+        id: uuid(),
+        date: new Date(+new Date + 86900000),
+        text: 'Send testing application',
+        expired: false,
+    },
 ];
 
 function taskReducer(state: typeState = initialState, action: ActionsType): typeState {
