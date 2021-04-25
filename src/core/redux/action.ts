@@ -1,4 +1,3 @@
-import { AnyAction } from 'redux';
 import { ActionsType } from '../models/types';
 import { ActionsTypes } from '../utils/constants';
 
@@ -24,4 +23,8 @@ export const addTask = ({ id, date, text }: addTaskActionProps): ActionsType => 
 export const deleteTask = ({ id }: deleteTaskActionProps): ActionsType => ({
     type: ActionsTypes.DELETE_TASK,
     id,
+});
+
+export const deleteAllTasks = (): ActionsType => ({
+    type: ActionsTypes.DELETE_ALL_TASKS,
 });

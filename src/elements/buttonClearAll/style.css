@@ -1,0 +1,24 @@
+.button-clear-all {
+    width: 200px;
+    height: 50px;
+    background-color: lightpink;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-clear-all span {
+    font-size: 20px;
+}
+
+.button-clear-all:hover {
+    background-color: orchid;
+    cursor: pointer;
+}
+
+.button-clear-all-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

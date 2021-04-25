@@ -37,6 +37,8 @@ function taskReducer(state: typeState = initialState, action: ActionsType): type
                 ]
         case ActionsTypes.DELETE_TASK: 
             return state.filter( c => c.id !== action.id);
+        case ActionsTypes.DELETE_ALL_TASKS: 
+            return [];
         default:
             return state;
     }

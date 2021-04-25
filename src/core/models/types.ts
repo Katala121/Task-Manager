@@ -1,5 +1,5 @@
 import { Task } from './task'
-import { ActionsTypes} from '../utils/constants'
+import { ActionsTypes } from '../utils/constants'
 
 export type typeState = Task[];
 
@@ -20,4 +20,8 @@ interface DeleteTaskAction {
     id: string,
 }
 
-export type ActionsType = AddTaskAction | DeleteTaskAction;
+interface DeleteAllTasksAction {
+    type: ActionsTypes.DELETE_ALL_TASKS,
+}
+
+export type ActionsType = AddTaskAction | DeleteTaskAction | DeleteAllTasksAction;
