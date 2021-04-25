@@ -10,7 +10,7 @@ export type Store = {
 interface AddTaskAction {
     type: ActionsTypes.ADD_TASK,
     id: string,
-    date: Date,
+    date: number,
     text: string,
     expired: boolean,
 }

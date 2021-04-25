@@ -2,7 +2,7 @@ import uuid from '../utils/generateUUID';
 
 export type Task = {
     id: string;
-    date: Date;
+    date: number;
     text: string;
     expired: boolean;
 };
@@ -13,7 +13,7 @@ type createTaskProps = {
 
 export const createTask = ({ text }: createTaskProps): Task => ({
     id: uuid(),
-    date: new Date(+new Date + 604800000),
+    date: +new Date + 604800000,
     text: text,
     expired: false,
 });
