@@ -17,7 +17,7 @@ const TaskItem: React.FC<Task> = ({ date, text, id, expired }: Task) => {
     if (expired) {
         return (
             <div className="task-item expired" data-id={id}>
-                <span>{date.toDateString()}</span>
+                <span>{new Date(date).toDateString()}</span>
                 <p>{cutText(text)}</p>
                 <span className="delete-task" onClick={deleteTaskItem}>❌</span>
             </div>
@@ -25,7 +25,7 @@ const TaskItem: React.FC<Task> = ({ date, text, id, expired }: Task) => {
     } else {
         return (
             <div className="task-item" data-id={id}>
-                <span>{date.toDateString()}</span>
+                <span>{new Date(date).toDateString()}</span>
                 <p>{cutText(text)}</p>
                 <span className="delete-task" onClick={deleteTaskItem}>❌</span>
             </div>

@@ -9,4 +9,8 @@ const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
 
+store.subscribe(() => {
+    localStorage['redux-store'] = JSON.stringify(store.getState().taskReducer);
+});
+
 export default store;

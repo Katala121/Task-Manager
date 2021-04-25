@@ -1,5 +1,5 @@
 import React from 'react';
-import  TaskItem  from '../../elements/task'
+import TaskItem from '../../elements/task'
 import NewTask from '../newTask/index';
 import ButtonClearAll from '../buttonClearAll/index';
 import { Store, typeState } from '../../core/models/types';
@@ -11,7 +11,6 @@ const mapStateToProps = (state: Store) => ({
 })
 
 const TaskItemList: React.FC<any> = ( { tasks }: any) => {
-    console.log(tasks)
 
     return (
         <div className="tasks-container">

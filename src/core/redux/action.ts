@@ -3,7 +3,7 @@ import { ActionsTypes } from '../utils/constants';
 
 type addTaskActionProps = {
     id: string,
-    date: Date,
+    date: number,
     text: string,
     expired: boolean,
 }

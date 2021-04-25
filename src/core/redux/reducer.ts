@@ -3,7 +3,7 @@ import { typeState, ActionsType } from '../models/types';
 import { initialState } from '../../core/utils/initialState';
 import { isExpiredTask } from '../../core/utils/isExpiredTask';
 
-function taskReducer(state: typeState = initialState, action: ActionsType): typeState {
+function taskReducer(state: typeState = localStorage['redux-store'] ? JSON.parse(localStorage['redux-store']) : initialState, action: ActionsType): typeState {
     state = isExpiredTask(state);
     switch (action.type) {
         case ActionsTypes.ADD_TASK: 
