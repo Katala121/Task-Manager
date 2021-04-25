@@ -2,7 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux'
 import { deleteTask } from '../../core/redux/action';
 import './style.css';
-import { Task } from '../../core/models/task'
+import { Task } from '../../core/models/task';
+import { cutText } from '../../core/utils/cutText';
 
 const TaskItem: React.FC<Task> = ({ date, text, id }: Task) => {
 
@@ -16,7 +17,7 @@ const TaskItem: React.FC<Task> = ({ date, text, id }: Task) => {
     return (
         <div className="task-item" data-id={id}>
             <span>{date.toDateString()}</span>
-            <p>{text}</p>
+            <p>{cutText(text)}</p>
             <span className="delete-task" onClick={deleteTaskItem}>❌</span>
         </div>
     );

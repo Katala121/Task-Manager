@@ -5,7 +5,7 @@ import uuid from '../utils/generateUUID';
 const initialState = [
     {
         id: uuid(),
-        date: new Date(),
+        date: new Date(+new Date - 86400000),
         text: 'Implementation testing application',
         expired: false,
     },

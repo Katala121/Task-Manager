@@ -10,3 +10,8 @@
 .delete-task:hover {
     cursor: pointer;
 }
+
+p {
+    width: 500px;
+    margin-left: 30px;
+}
