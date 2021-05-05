@@ -7,18 +7,20 @@ import './style.css';
 
 const NewTask: React.FC = () => {
     
-    const dispatch = useDispatch();
-    
-    
+    const dispatch = useDispatch()
+
+    const inputElement: React.RefObject<HTMLInputElement> = React.createRef()
+        
     const addNewTask = () => {
-        const input = document.querySelector('input')
-        const task = createTask({ text: String(input?.value) });
+        const input = inputElement.current?.value
+        const task = createTask({ text: String(input) });
         dispatch(addTask(task));
     }
 
     return (
         <div className="new-task">
             <input 
+                ref={inputElement}
                 type="text"
                 placeholder="Enter new task"
                 maxLength={120}
