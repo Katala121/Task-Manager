@@ -1,8 +1,0 @@
-.tasks-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 1000px;
-    border-bottom: 1px solid lightgrey;
-}
